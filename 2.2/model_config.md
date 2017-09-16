@@ -136,6 +136,7 @@ export default {
   host: '127.0.0.1',
   adapter: {
     mysql: { 
+      type: 'mysql', //这里需要将 type 重新设置为 mysql
       parser: function(options){ //mysql 的配置解析方法
         let sql = options.sql; //接下来要执行的 SQL 语句
         if(sql.indexOf('SELECT') === 0){ //SELECT 查询
